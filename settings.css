@@ -1,0 +1,7 @@
+:root {
+    --toolbar-height: 40px;
+    --sidebar-hover-time: 300ms;
+    --sidebar-collapsed-width: 50px;
+    --sidebar-expanded-width: 200px;
+    --window-controls-width: 35px;
+}

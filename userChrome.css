@@ -1,0 +1,15 @@
+/* Function */
+@import "Parts/centered_tab_content.css";
+@import "Parts/inline_tab_audio_icons.css";
+@import "Parts/tabs_fill_available_width.css";
+@import "Parts/floating_findbar_on_top.css";
+@import "Parts/compact_urlbar_megabar.css";
+@import "Parts/tabs_on_bottom.css";
+@import "Parts/hide_tabs_with_one_tab_w_window_controls.css";
+@import "Parts/titleToolbar.css";
+@import "Parts/verticalTabs.css";
+@import "Parts/hoverVerticalTabs.css";
+
+/* Theme */
+@import "Themes/main.css";
+@import "Themes/libadwaita.css";

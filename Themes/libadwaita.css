@@ -1,0 +1,74 @@
+:root {
+  --toolbar-bgcolor: #ebebeb !important;
+  --toolbar-field-background-color: #dcdcdc !important;
+  --tab-bgcolor: #e1e1e1;
+  --tab-hover-bgcolor: #dcdcdc;
+  --chrome-content-separator-color: #cfcfcf !important;
+
+  --window-border-radius: 10px;
+}
+
+:root:-moz-window-inactive {
+  --toolbar-bgcolor: #fafafa !important;
+  --toolbar-field-background-color: #f0f0f0 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --toolbar-bgcolor: #303030 !important;
+    --toolbar-field-background-color: #454545 !important;
+    --tab-bgcolor: #262626;
+    --tab-hover-bgcolor: #2d2d2d;
+    --chrome-content-separator-color: #4f4f4f !important;
+  }
+
+  :root:-moz-window-inactive {
+    --toolbar-bgcolor: #242424 !important;
+    --toolbar-field-background-color: #2f2f2f !important;
+  }
+}
+
+/* Rounded corners */
+#toolbar-menubar,
+#navigator-toolbox,
+#titlebar,
+#TabsToolbar {
+    border-top-left-radius: var(--window-border-radius) !important;
+    border-top-right-radius: var(--window-border-radius) !important;
+}
+#nav-bar {
+    border-top-left-radius: var(--window-border-radius) !important;
+}
+
+#urlbar-background {
+  border: none !important;
+}
+
+.tabbrowser-tab {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-top: 1px solid var(--chrome-content-separator-color) !important;
+  border-left: 1px solid var(--chrome-content-separator-color) !important;
+}
+
+.tabbrowser-tab:first-child {
+  border-left: none !important;
+}
+
+.tab-background {
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--tab-bgcolor) !important;
+}
+
+.tabbrowser-tab:hover .tab-background {
+  background-color: var(--tab-hover-bgcolor) !important;
+}
+
+.tab-background[selected][selected=true] {
+ background-image: none !important;
+ background-color: var(--toolbar-bgcolor) !important;
+ box-shadow: none !important;
+ border: none !important;
+}

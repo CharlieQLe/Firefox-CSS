@@ -1,0 +1,21 @@
+@import "../settings.css";
+
+#main-window[titlepreface*="[Sidebery]"] #TabsToolbar {
+    height: 0 !important;
+    display: none;
+}
+
+#main-window[titlepreface*="[Sidebery]"] #tabbrowser-tabs {
+    z-index: 0 !important;
+}
+
+/* Hide sidebar header */
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
+    display: none !important;
+}
+
+/* Set the sidebar width */
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
+    min-width: var(--sidebar-collapsed-width) !important;
+    max-width: var(--sidebar-expanded-width) !important;
+}
