@@ -8,8 +8,19 @@
 @import "Parts/hide_tabs_with_one_tab_w_window_controls.css";
 @import "Parts/titleToolbar.css";
 @import "Parts/verticalTabs.css";
-@import "Parts/hoverVerticalTabs.css";
 
-/* Theme */
-@import "Themes/main.css";
-@import "Themes/libadwaita.css";
+/* Remove the background image */
+#navigator-toolbox,
+#titlebar,
+#nav-bar,
+#PersonalToolbar,
+#customization-container {
+    background-image: none !important;
+}
+
+/* Tab toolbar color */
+#TabsToolbar,
+#navigator-toolbox,
+#toolbar-menubar { 
+    background-color: var(--toolbar-bgcolor) !important;
+}

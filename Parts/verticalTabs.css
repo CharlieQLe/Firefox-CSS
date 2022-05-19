@@ -1,5 +1,6 @@
 @import "../settings.css";
 
+/* Hide horizontal tabs when Sidebery sidebar is visible */
 #main-window[titlepreface*="[Sidebery]"] #TabsToolbar {
     height: 0 !important;
     display: none;
@@ -9,13 +10,44 @@
     z-index: 0 !important;
 }
 
-/* Hide sidebar header */
+/* Hide the Sidebery sidebar header */
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
     display: none !important;
 }
 
-/* Set the sidebar width */
+/* Set the Sidebery sidebar width */
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
     min-width: var(--sidebar-collapsed-width) !important;
     max-width: var(--sidebar-expanded-width) !important;
+}
+
+/* Hide the Sidebery sidebar splitter */
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] + #sidebar-splitter {
+  display: none !important;
+}
+
+/* Collapse the Sidebery sidebar */
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
+    z-index: 1 !important;
+    position: relative !important;
+    transition: all var(--sidebar-hover-time) cubic-bezier(0.22, 1, 0.36, 1);
+    min-width: var(--sidebar-collapsed-width) !important;
+    max-width: var(--sidebar-collapsed-width) !important;
+    border-right: 1px solid var(--chrome-content-separator-color) !important;
+}
+
+/* Expand Sidebery sidebar on hover */
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover #sidebar {
+    z-index: 1 !important;
+    position: relative !important;
+    min-width: var(--sidebar-expanded-width) !important;
+    max-width: var(--sidebar-expanded-width) !important;
+    margin-right: calc(var(--sidebar-collapsed-width) - var(--sidebar-expanded-width)) !important;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+/* Place the navigator toolbox above the sidebar */
+#navigator-toolbox-background {
+  z-index: 7 !important;
+  position: relative !important;
 }
